@@ -24,7 +24,7 @@
 
           AFRAME.registerComponent('video-vidhandler2', {
             init: function() {
-    console.log('video init entered');
+          console.log('video init entered');
                 this.toggle = false;
                 this.vid = document.querySelector("#gym2");
                 this.vid.pause();
@@ -43,7 +43,27 @@
         });
           
           //Tricep Press Video Component
-          
+
+          AFRAME.registerComponent('video-vidhandler3', {
+                init: function() {
+		          console.log('video init entered');
+                    this.toggle = false;
+                    this.vid = document.querySelector("#gym3");
+                    this.vid.pause();
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
+                        this.toggle = false;
+                        this.vid.pause();
+                    }
+                }
+            });
+
 
 
           // Gym Timer for Covid Protocols
