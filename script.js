@@ -1,4 +1,4 @@
-            // Gym Video Handler
+      // Gym Video Handler
             
             AFRAME.registerComponent('video-vidhandler1', {
               init: function() {
@@ -109,4 +109,20 @@
   
     // Map Component for Sports Shop
   
-    
+    AFRAME.registerComponent('mappoint-handler', {
+            
+      init: function() {
+          const marker5 = document.querySelector("#marker5");
+          const imgMap = document.querySelector("#img-map");
+        
+          marker5.addEventListener('click', function(ev, target) {
+              const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+        if (imgMap && intersectedElement === imgMap) {
+            console.log("Clicked");
+            document.location.href = "https://g.page/HennurRoadDecathlon?share";
+        }
+          });
+      }
+        });
+
+        
