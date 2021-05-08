@@ -83,7 +83,10 @@
 
             <!-- Map Location Marker -->
  
-
+            <a-marker id="marker5" type='pattern' url='markers/pattern-decathlon.patt' emitevents="true" cursor="rayOrigin: mouse" mappoint-handler>
+              <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map'></a-plane>
+              </a-marker>    
+              
             <!-- Camera Access -->
 
             <a-entity camera></a-entity>
